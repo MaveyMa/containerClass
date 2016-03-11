@@ -18,7 +18,7 @@ class Container
 		void displaySet();
 		bool isElement(int x);
 		//bool isEquivalent(int ara1[], int ara2[ ], unsigned sz1, unsigned sz2);
-		bool isEquivalent(Container name, unsigned sz);
+		bool isEquivalent(Container name, unsigned nameCount);
 		unsigned getCount()const {return count;}
 		unsigned getSize()const {return size;}
 };

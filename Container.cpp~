@@ -50,33 +50,35 @@ bool Container::isElement(int x)
 	return false;
 }//IS X AN ELEMENT OF THE SET?
 
-bool Container::isEquivalent(Container name, unsigned sz)
+bool Container::isEquivalent(Container name, unsigned nameCount)
 {
 	unsigned matches1 = 0, matches2 = 0;
 
 	//Loop thru first array to compare to second.
 	for (int i = 0; i < count; i++) //{3, 2, 1}
 	{
-		for (int j = 0; j < sz; j++) //{3, 2, 1}
+		for (int j = 0; j < nameCount; j++) //{3, 2, 1}
 		{
 			if (array[i] == name.array[j])
 			{
 				matches1++;
-				cout << "First" << endl;
+				//cout << array[i] << endl;
+				//cout << "First" << endl;
 				break;
 			}
 		}//END J LOOP
 	}//END I LOOP
 
 	//Loop thru second array to compare to first.
-	for (int i = 0; i < sz; i++)
+	for (int i = 0; i < nameCount; i++)
 	{
 		for (int j = 0; j < count; j++)
 		{
 			if (name.array[i] == array[j])
 			{
 				matches2++;
-				cout << "Second" << endl;
+				//cout << name.array[i] << endl;
+				//cout << "Second" << endl;
 				break;
 			}
 		}//END J LOOP
